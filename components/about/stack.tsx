@@ -2,27 +2,7 @@
 
 import { RotateCcw } from "lucide-react";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-
-type Chip = {
-  label: string;
-  slug: string;
-  bg: string;
-  fg: string;
-  iconUrl?: string;
-};
-
-const CHIPS: Chip[] = [
-  { label: "React", slug: "react", bg: "#1FB6CB", fg: "#ffffff" },
-  { label: "Next.js", slug: "nextdotjs", bg: "#1f1f1f", fg: "#ffffff" },
-  { label: "TypeScript", slug: "typescript", bg: "#2F74C0", fg: "#ffffff" },
-  { label: "JavaScript", slug: "javascript", bg: "#F7DF1E", fg: "#1f1f1f" },
-  { label: "Tailwind CSS", slug: "tailwindcss", bg: "#2BBCF5", fg: "#ffffff" },
-  { label: "Redux Toolkit", slug: "redux", bg: "#764ABC", fg: "#ffffff" },
-  { label: "Git", slug: "git", bg: "#F05032", fg: "#ffffff" },
-  { label: "GitHub", slug: "github", bg: "#181717", fg: "#ffffff" },
-  { label: "Docker", slug: "docker", bg: "#2496ED", fg: "#ffffff" },
-  { label: "Postman", slug: "postman", bg: "#FF6C37", fg: "#ffffff" },
-];
+import { stackChips as CHIPS, type StackChip as Chip } from "@/lib/content";
 
 const CHIP_RADIUS = 14;
 const ICON_RADIUS = 10;

@@ -6,6 +6,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { ContactButton } from "@/components/contact/contact-button";
+import { hero } from "@/lib/content";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -25,10 +26,10 @@ export function HeroCtas(): ReactNode {
           className="flex items-center gap-3"
         >
           <Link
-            href="/projects"
+            href={hero.ctas.primary.href}
             className="border border-foreground/5 focus-ring group inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground shadow-2xl transition-colors hover:bg-foreground/4"
           >
-            View My Work
+            {hero.ctas.primary.label}
             <ArrowRight
               className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
               aria-hidden="true"
@@ -36,12 +37,12 @@ export function HeroCtas(): ReactNode {
           </Link>
 
           <Link
-            href="/FarrukhsResume.pdf"
+            href={hero.ctas.resume.href}
             target="_blank"
             rel="noopener noreferrer"
             className="border border-foreground/8 focus-ring inline-flex cursor-pointer items-center gap-2 rounded-xl bg-background px-5 py-2.5 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/4"
           >
-            Resume
+            {hero.ctas.resume.label}
           </Link>
         </motion.div>
       </motion.div>

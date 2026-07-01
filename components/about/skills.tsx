@@ -1,19 +1,5 @@
 import type { ReactNode } from "react";
-
-const SKILLS = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Tailwind CSS",
-  "Redux Toolkit",
-  "HTML5 / CSS3",
-  "REST API Integration",
-  "Git & GitHub",
-  "Docker",
-  "Component Architecture",
-  "Responsive Design",
-];
+import { skills as SKILLS } from "@/lib/content";
 
 export function Skills(): ReactNode {
   return (

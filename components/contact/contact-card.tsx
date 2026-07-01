@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 
 import { ContactCardCtas } from "./contact-card-ctas";
 import { FadeIn } from "@/components/ui/motion-primitives";
+import { contact } from "@/lib/content";
 import { ShaderFlow } from "../shaders/shader-flow";
 
 const CARD_FADE_MASK =
@@ -30,10 +31,10 @@ export function ContactCard(): ReactNode {
             <div className="relative grid gap-8 p-6 sm:gap-10 sm:p-7 md:grid-cols-[1.2fr_1fr] md:items-stretch md:gap-6 md:p-6">
               <div className="flex flex-col gap-5">
                 <h2 className="font-serif text-[2.25rem] font-medium leading-[1.05] tracking-tight text-foreground sm:text-[2.75rem] lg:text-[3.25rem]">
-                  Let&rsquo;s connect
+                  {contact.heading}
                 </h2>
                 <p className="max-w-[29ch] text-[18px] leading-[1.4] tracking-tight text-foreground/65 sm:text-[22px] mb-6">
-                  I&rsquo;m always open to new opportunities and collaborations. Feel free to reach out through any of the channels below!
+                  {contact.subtitle}
                 </p>
                 <ContactCardCtas />
               </div>
@@ -41,27 +42,27 @@ export function ContactCard(): ReactNode {
               <div className="border-foreground/8 flex flex-col items-center justify-center gap-6 rounded-[1.1rem] border bg-background p-6 sm:p-8">
                 <div className="flex items-center gap-3 opacity-75">
                   <SocialIcon
-                    href="mailto:farrukh.front.dev@gmail.com"
+                    href={contact.socials.email}
                     label="Email"
                     lucideIcon={Mail}
                   />
                   <SocialIcon
-                    href="https://www.linkedin.com/in/farrukhdjumayev"
+                    href={contact.socials.linkedin}
                     label="LinkedIn"
                     imageSrc="/linkedin.svg"
                   />
                   <SocialIcon
-                    href="https://github.com/Farrukh-Front-Dev"
+                    href={contact.socials.github}
                     label="GitHub"
                     imageSrc="/x.svg"
                   />
                 </div>
                 <div className="flex flex-col items-center gap-1 text-center">
                   <p className="text-[13px] tracking-tight text-foreground/70">
-                    2025 &copy; Farrukh Djumayev
+                    {contact.copyright}
                   </p>
                   <p className="text-[12px] tracking-tight text-foreground/45">
-                    Frontend Engineer
+                    {contact.role}
                   </p>
                 </div>
               </div>

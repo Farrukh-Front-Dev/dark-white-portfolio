@@ -3,35 +3,10 @@
 import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, type ReactNode } from "react";
-
-type Entry = {
-  company: string;
-  role: string;
-  period: string;
-  slug?: string;
-  brand?: string;
-};
-
-const ENTRIES: Entry[] = [
-  {
-    company: "Independent",
-    role: "Frontend Developer",
-    period: "2024 – Present",
-    brand: "#0AE448",
-  },
-  {
-    company: "School 21 / 42 Network",
-    role: "Software Engineering Student",
-    period: "2024 – Present",
-    brand: "#1f1f1f",
-  },
-  {
-    company: "Najot Ta'lim",
-    role: "Frontend Development Program",
-    period: "Completed",
-    brand: "#2F74C0",
-  },
-];
+import {
+  experience as ENTRIES,
+  type ExperienceEntry as Entry,
+} from "@/lib/content";
 
 const COLLAPSED_COUNT = 3;
 const ROW_HEIGHT = 64;

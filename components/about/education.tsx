@@ -1,24 +1,8 @@
 import type { ReactNode } from "react";
-
-type Entry = {
-  school: string;
-  degree: string;
-  period: string;
-  slug?: string;
-};
-
-const ENTRIES: Entry[] = [
-  {
-    school: "School 21 / 42 Network",
-    degree: "Software Engineering Program",
-    period: "2024 – Present",
-  },
-  {
-    school: "Najot Ta'lim",
-    degree: "Frontend Development Program",
-    period: "Completed",
-  },
-];
+import {
+  education as ENTRIES,
+  type EducationEntry as Entry,
+} from "@/lib/content";
 
 const ROW_HEIGHT = 64;
 
